@@ -30,6 +30,7 @@ public class PatientList {
         while (trv.next != null) {
             if (trv.next.data.id == id) {
                 trv.next = trv.next.next;
+                return;
             }
             trv = trv.next;
         }
@@ -37,7 +38,7 @@ public class PatientList {
 
     public Patient findPatient(int id) {
         Node trv = head;
-        while (trv.next != null) {
+        while (trv != null) {
             if (trv.data.id == id) {
                 return trv.data;
             }
