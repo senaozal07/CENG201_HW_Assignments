@@ -41,7 +41,7 @@ public class TreatmentQueue {
         while(current != null) {
             System.out.println(current.data);
             if(current == head){
-                System.out.println("Frornt");
+                System.out.println("Front");
             }
             if(current.next != null) {
                 System.out.println("-->");

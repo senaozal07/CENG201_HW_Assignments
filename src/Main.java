@@ -16,6 +16,7 @@ public class Main {
         line.findPatient(2);
         System.out.println("new line");
         line.printList();
+        System.out.println("----------------------------");
 
 
         //TASK2 Test Scenario
@@ -39,6 +40,28 @@ public class Main {
 
         System.out.println("Remaining Queue is: ");
         line2.printQueue();
+        System.out.println("---------------------------");
+
+
+
+        //TASK3 Test Scenario
+        DischargeStack line3 = new DischargeStack();
+
+        line3.push(new DischargeRecord(1));
+        line3.push(new DischargeRecord(2));
+        line3.push(new DischargeRecord(3));
+        line3.push(new DischargeRecord(4));
+        line3.push(new DischargeRecord(5));
+
+        line3.pop();
+        line3.pop();
+
+
+        System.out.println("Remaining Stack is: ");
+        line3.printStack();
+        System.out.println("----------------------------");
+
+
 
 
 

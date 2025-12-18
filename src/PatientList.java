@@ -1,8 +1,8 @@
 public class PatientList {
     Node head;
 
-    public void addPatient(Patient p) {
-        Node newNode = new Node(p);
+    public void addPatient(Patient data) {
+        Node newNode = new Node(data);
 
         if (head == null) {
             head = newNode;
