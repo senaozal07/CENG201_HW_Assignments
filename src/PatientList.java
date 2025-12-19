@@ -5,11 +5,11 @@ public class PatientList {
         Node newNode = new Node(data);
 
         if (head == null) {
-            head = newNode;
+            head = newNode;    //if our list is empty our newNode is will be head.
             return;
         }
         Node trv = head;
-        while (trv.next != null) {
+        while (trv.next != null) {     // if our list not empty we add newNode like this.
             trv = trv.next;
         }
         trv.next = newNode;
@@ -38,7 +38,7 @@ public class PatientList {
 
     public Patient findPatient(int id) {
         Node trv = head;
-        while (trv != null) {
+        while (trv != null) {   // we are searching who we are looking.
             if (trv.data.id == id) {
                 return trv.data;
             }
@@ -49,11 +49,11 @@ public class PatientList {
     public void printList() {
         Node trv = head;
         if (trv == null) {
-            System.out.println("There is no one at the line.");
+            System.out.println("There is no one at the line.");    //list is empty.
         }
         while (trv != null) {
             System.out.println(trv.data.id + " ");
-            trv = trv.next;
+            trv = trv.next;     // this shows us whole list.
         }
         System.out.println();
     }

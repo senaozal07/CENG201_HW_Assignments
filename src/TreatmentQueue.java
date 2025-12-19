@@ -12,27 +12,27 @@ public class TreatmentQueue {
     public void enqueue(TreatmentRequest data) {
         Node2 newNode = new Node2(data);
 
-        if(tail == null) {
+        if(tail == null) {   //first node add
             head = tail = newNode;
         }else {
             tail.next  = newNode;
             tail = newNode;
         }
-        size++;
+        size++;   //we are increasing the size
     }
 
     public TreatmentRequest dequeue() {
         if(head == null) {
-            return null;
+            return null;   // list is empty
         }
-        TreatmentRequest val = head.data;
+        TreatmentRequest val = head.data;    //take the info first
         head = head.next;
-        size--;
+        size--;      //we are decreasing the size
         return val;
     }
 
     public int size() {
-        return size;
+        return size;    //shows us the size
     }
 
     public void printQueue() {
@@ -46,7 +46,8 @@ public class TreatmentQueue {
             if(current.next != null) {
                 System.out.println("-->");
             }
-            current = current.next;
+            current = current.next;     //we are searching and showing the whole Queue
         }
+        System.out.println();
     }
 }
