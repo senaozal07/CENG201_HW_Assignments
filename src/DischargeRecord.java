@@ -6,6 +6,8 @@ public class DischargeRecord {
         this.patientId = patientId;
         this.dischargeTime = System.currentTimeMillis();
     }
+
+    //write all get methods
     public int getPatientId() {
         return patientId;
     }

@@ -11,6 +11,7 @@ public class TreatmentRequest {
 
     }
 
+    //write all get method
     public int getPatientId() {
         return patientId;
     }

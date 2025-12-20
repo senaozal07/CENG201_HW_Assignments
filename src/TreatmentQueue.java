@@ -16,11 +16,11 @@ public class TreatmentQueue {
     public void enqueue(TreatmentRequest request) {
         Node2 newNode = new Node2(request);
 
-        if(request.priority) {
+        if(request.priority) {     //if there is a priority.
             if(priorityhead == null) {
-                priorityhead = prioritytail = newNode;
+                priorityhead = prioritytail = newNode;   //if our queue is empty
             } else {
-                prioritytail.next = newNode;
+                prioritytail.next = newNode;   //add node to the end
                 prioritytail = newNode;
             }
         }
@@ -35,24 +35,26 @@ public class TreatmentQueue {
     }
 
     public TreatmentRequest dequeue() {
+        //this is for if there is a priority patient
         if(priorityhead != null) {
-            TreatmentRequest value = priorityhead.data;
+            TreatmentRequest value = priorityhead.data;   // take the first data
             priorityhead = priorityhead.next;
-            if(priorityhead == null) {
+            if(priorityhead == null) {  //the queue is empty
                 prioritytail = null;
             }
+            size--;     //decreasing the size
             return value;
         }
         if(head != null) {
-        TreatmentRequest value = head.data;    //take the info first
-        head = head.next;
-        if(head == null) {
-            tail = null;
+            TreatmentRequest value = head.data;    //take the first info
+            head = head.next;
+            if (head == null) {   // if there is no head we must empty the tail
+                tail = null;
+            }
+            size--;    //decreasing the size
+            return value;
         }
-        return value;
-        }
-        size--;      //we are decreasing the size
-        return null;
+        return null;  // if both of them are null
     }
 
     public int size() {
@@ -61,13 +63,13 @@ public class TreatmentQueue {
 
     public void printQueue() {
         System.out.println("Priority Queue: ");
-        Node2 current = priorityhead;
+        Node2 current = priorityhead;  // we start the output from the top
 
         if(current == null) {
             System.out.println("empty");
         } else {
             while(current != null) {
-                System.out.println("Patient: " + current.data.patientId);
+                System.out.println("Patient: " + current.data.patientId);    //output the all patient's ıd
                 current = current.next;
             }
         }
@@ -75,11 +77,11 @@ public class TreatmentQueue {
         System.out.println("Normal Qeueu: ");
         current = head;
 
-        if(current == null) {
+        if(current == null) {      //the queue is empty
             System.out.println("empty");
         }else {
             while(current != null) {
-            System.out.println(current.data);
+            System.out.println(current.data);   //show the data
             if (current.next != null) {
                 System.out.println("-->");
             }

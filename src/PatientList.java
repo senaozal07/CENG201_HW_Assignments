@@ -16,7 +16,7 @@ public class PatientList {
     }
 
     public void removePatient(int id) {
-        //Case 1 if our list is null.
+        //Case 1 if our list is empty.
         if (head == null) {
             return;
         }

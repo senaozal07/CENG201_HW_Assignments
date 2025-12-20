@@ -15,7 +15,7 @@ public class DischargeStack {
     }
 
     public DischargeRecord pop() {
-        if(head == null) {
+        if(head == null) {       // the stack is empty
             System.out.println("empty");
             return null;
         }
@@ -36,14 +36,14 @@ public class DischargeStack {
     }
 
     public void printStack() {
-        if(head == null) {
+        if(head == null) {      //stack is empty
             System.out.println("empty");
             return;
         }
         System.out.println("Head to tail.");
-        Node3 temp = head;
+        Node3 temp = head;     //start from the top
         while(temp != null) {
-            System.out.println(temp.data);
+            System.out.println(temp.data);     //show the data
             if(temp.next != null) {
                 System.out.println("-->");
             }

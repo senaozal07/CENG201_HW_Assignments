@@ -11,6 +11,8 @@ public class Patient {
         this.age = age;
     }
 
+
+    //write a get method
     public int getId() {
         return id;
     }
