@@ -1,6 +1,6 @@
 public class DischargeRecord {
-    private int patientId;
-    private long dischargeTime;
+    int patientId;
+    long dischargeTime;
 
     public DischargeRecord(int patientId) {
         this.patientId = patientId;
@@ -11,5 +11,8 @@ public class DischargeRecord {
     }
     public long getDischargeTime() {
         return dischargeTime;
+    }
+    public String toString() {
+        return "Discharge Record patient:" + patientId + " Time: " + dischargeTime;
     }
 }

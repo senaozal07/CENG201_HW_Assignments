@@ -10,4 +10,20 @@ public class Patient {
         this.severity = severity;
         this.age = age;
     }
+
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getSeverity() {
+        return severity;
+    }
+    public int getAge() {
+        return age;
+    }
+    public String toString() {
+        return "Patient: " + name + " id: " + id + " severity: " + severity + " age: " + age;
+    }
 }

@@ -1,12 +1,12 @@
 public class DischargeStack {
-    Node3 head;
+    private Node3 head;
 
     DischargeStack() {
         head = null;
     }
 
-    public void push(DischargeRecord data) {
-        Node3 newNode = new Node3(data);
+    public void push(DischargeRecord record) {
+        Node3 newNode = new Node3(record);
         newNode.next = head;
         if(head != null) {
             head.prev = newNode;       // update head because new node added
@@ -15,6 +15,10 @@ public class DischargeStack {
     }
 
     public DischargeRecord pop() {
+        if(head == null) {
+            System.out.println("empty");
+            return null;
+        }
         DischargeRecord val = head.data;
         head = head.next;     //update head because first node removed
         if(head != null) {
@@ -24,13 +28,19 @@ public class DischargeStack {
     }
 
     public DischargeRecord peek() {
-        if(head == null) {   //list is empty
+        if(head == null) {    //list is empty
+            System.out.println("empty");
             return null;
         }
         return head.data;   //this shows us the head
     }
 
     public void printStack() {
+        if(head == null) {
+            System.out.println("empty");
+            return;
+        }
+        System.out.println("Head to tail.");
         Node3 temp = head;
         while(temp != null) {
             System.out.println(temp.data);

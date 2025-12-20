@@ -1,10 +1,14 @@
 public class TreatmentRequest {
-    private int patientId;
-    private long arrivalTime;
+    int patientId;
+    long arrivalTime;
+    boolean priority;
 
-    public TreatmentRequest(int patientId) {
+
+    public TreatmentRequest(int patientId,boolean priority)  {
         this.patientId = patientId;
         this.arrivalTime = System.currentTimeMillis();
+        this.priority = priority;
+
     }
 
     public int getPatientId() {
@@ -12,5 +16,8 @@ public class TreatmentRequest {
     }
     public long getArrivalTime() {
         return arrivalTime;
+    }
+    public String toString() {
+        return "Patient: " + patientId + " Time: " + arrivalTime;
     }
 }
