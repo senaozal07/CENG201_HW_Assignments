@@ -52,7 +52,7 @@ public class PatientList {
             System.out.println("There is no one at the line.");    //list is empty.
         }
         while (trv != null) {
-            System.out.println(trv.data.id + " ");
+            System.out.println(trv.data + " ");
             trv = trv.next;     // this shows us whole list.
         }
         System.out.println();

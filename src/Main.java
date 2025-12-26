@@ -12,6 +12,9 @@ public class Main {
         line.addPatient(new Patient(4,"Lina",5,17));
 
 
+
+        System.out.println("-----------TASK 1-------------");
+
         //testing printlist
         System.out.println("line");
         line.printList();
@@ -19,13 +22,15 @@ public class Main {
 
         //removing patients
         line.removePatient(4);
+
+        //finding patient
         line.findPatient(2);
 
 
         //print the last version
         System.out.println("new line");
         line.printList();
-        System.out.println("----------------------------");
+        System.out.println("-------------TASK 2---------------");
 
 
         //TASK2 Test Scenario
@@ -53,7 +58,7 @@ public class Main {
         //show queue
         System.out.println("Remaining Queue is: ");
         line2.printQueue();
-        System.out.println("---------------------------");
+        System.out.println("------------TASK3---------------");
 
 
 
@@ -75,7 +80,7 @@ public class Main {
         //show stack
         System.out.println("Remaining Stack is: ");
         line3.printStack();
-        System.out.println("----------------------------");
+        System.out.println("-------------TASK 4---------------");
 
 
 
